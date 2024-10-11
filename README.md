@@ -1,2 +1,2 @@
 This is a Job and Internship Portal.
-this web application createe by the Aditya Gupta, Aditya Singh and Ansh Kushwah
+This web application is created by the Aditya Gupta, Aditya Singh and Ansh Kushwaha.
