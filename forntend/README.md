@@ -1,2 +1,2 @@
 I'm Aditya Singh
-Hyy Aditya Gupta and Ansh
+I'm developed frontend and Aditya Gupta developed backend and Ansh also worked on this project, he search the images , logos which is used in the frontend  
