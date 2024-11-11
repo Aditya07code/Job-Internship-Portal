@@ -1,41 +1,64 @@
-    import React,{useState} from 'react'
-import { Button } from './ui/button'
-import { Search } from 'lucide-react'
-import { useDispatch } from 'react-redux';
-import { setSearchedQuery } from '../redux/jobSlice';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Button } from "./ui/button";
+import { Search } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { setSearchedQuery } from "../redux/jobSlice";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-    const [query, setQuery] = useState("");
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-    const searchJobHandler = () => {
-        dispatch(setSearchedQuery(query));
-        navigate("/browse");
-    }
+  const searchJobHandler = () => {
+    dispatch(setSearchedQuery(query));
+    navigate("/browse");
+  };
 
-    return (
-        <div className='text-center'>
-            <div className='flex flex-col gap-5 my-10'>
-                <span className=' mx-auto px-4 py-2 rounded-full bg-gray-100 text-[#F83002] font-medium'>No. 1 Job Hunt Website</span>
-                <h1 className='text-5xl font-bold'>Search, Apply & <br /> Get Your <span className='text-[#6A38C2]'>Dream Jobs</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur temporibus nihil tempora dolor!</p>
-                <div className='flex w-[40%] shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto'>
-                    <input
-                        type="text"
-                        placeholder='Find your dream jobs'
-                        onChange={(e) => setQuery(e.target.value)}
-                        className='outline-none border-none w-full'
-
-                    />
-                    <Button onClick={searchJobHandler} className="rounded-r-full bg-[#6A38C2]">
-                        <Search className='h-5 w-5' />
-                    </Button>
-                </div>
-            </div>
+  return (
+    <div className="relative bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 text-white py-20 px-5">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10 text-center">
+        <div className="flex flex-col gap-5 md:w-1/2">
+          <span className="mx-auto px-4 py-2 rounded-full bg-white text-[#3B00DB] font-medium">
+            Interactive Job Quest Website
+          </span>
+          <h1 className="text-5xl font-bold">
+            Discover,
+            <br /> Apply &amp;
+            <span className="text-[#F2003C]"> Achieve Your Career Goals</span>
+          </h1>
+          <p>
+            "JobVault connects job seekers with their perfect opportunities,
+            streamlining the search for a rewarding career."
+          </p>
+          <div className="flex md:w-[80%] w-full shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto bg-white">
+            <input
+              type="text"
+              placeholder="Find your dream jobs"
+              aria-label="Job search input"
+              onChange={(e) => setQuery(e.target.value)}
+              className="outline-none border-none w-full text-gray-700"
+            />
+            <Button
+              onClick={searchJobHandler}
+              className="rounded-r-full bg-[#F2003C]"
+            >
+              <Search className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
-    )
-}
 
-export default HeroSection
+        {/* Side Image */}
+        <div className="w-1/3">
+          <img
+            src="https://img.freepik.com/free-vector/man-having-online-job-interview_52683-43379.jpg?semt=ais_hybrid"
+            alt="Job search illustration"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HeroSection;
