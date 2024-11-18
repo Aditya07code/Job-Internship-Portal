@@ -19,7 +19,7 @@ const Home = () => {
     }
   }, []);
   return (
-    <div>
+    <div className='bg-[#C7D2F3]'>
       <Navbar />
       <HeroSection />
       <CategoryCarousel />

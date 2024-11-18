@@ -24,14 +24,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-// app.get("/home",(req,res)=>{
-//   return res.status(200).json({
-//     message : "data coming from backend",
-//     success : true
-
-//   })
-// });
-
 
 const PORT = process.env.PORT || 3000;
 

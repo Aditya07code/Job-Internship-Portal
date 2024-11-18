@@ -34,11 +34,11 @@ const Navbar = () => {
 
   console.log("Current User:", user);
   return (
-    <div className="bg-white">
+    <div className="bg-[#6366F1]">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16">
         <div>
-         <Link to="/"> <h1 className="text-2xl font-bold">
-            Job<span className="text-[#007FFF]">Vault</span>
+         <Link to="/"> <h1 className="text-2xl font-bold text-white">
+            Job<span className="text-black">Vault</span>
           </h1></Link>
         </div>
         <div className="flex items-center gap-12">
@@ -55,13 +55,13 @@ const Navbar = () => {
             ) : (
               <>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="text-white">Home</Link>
                 </li>
                 <li>
-                  <Link to="/jobs">Jobs</Link>
+                  <Link to="/jobs" className="text-white">Jobs</Link>
                 </li>
                 <li>
-                  <Link to="/browse">Browse</Link>
+                  <Link to="/browse" className="text-white">Browse</Link>
                 </li>
               </>
             )}
@@ -69,7 +69,7 @@ const Navbar = () => {
           {!user ? (
             <div className="flex items-center gap-2">
               <Link to="/login">
-                <Button variant="outline">Login</Button>
+                <Button variant="outline" className="hover:bg-[#5b30a6] ">Login</Button>
               </Link>
               <Link to="/signup">
                 <Button className="bg-[#F2003C] hover:bg-[#5b30a6]">

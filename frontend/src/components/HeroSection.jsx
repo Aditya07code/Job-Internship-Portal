@@ -16,18 +16,19 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 text-white py-20 px-5">
+    <div className="relative text-white py-20 px-5 bg-[#BFDBFE]"
+>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 text-center">
         <div className="flex flex-col gap-5 md:w-1/2">
           <span className="mx-auto px-4 py-2 rounded-full bg-white text-[#3B00DB] font-medium">
             Interactive Job Quest Website
           </span>
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-5xl font-bold text-black">
             Discover,
             <br /> Apply &amp;
             <span className="text-[#F2003C]"> Achieve Your Career Goals</span>
           </h1>
-          <p>
+          <p className="text-black">
             "JobVault connects job seekers with their perfect opportunities,
             streamlining the search for a rewarding career."
           </p>
@@ -51,7 +52,7 @@ const HeroSection = () => {
         {/* Side Image */}
         <div className="w-1/3">
           <img
-            src="https://img.freepik.com/free-vector/man-having-online-job-interview_52683-43379.jpg?semt=ais_hybrid"
+            src="https://aditya07code.github.io/portfolio/bg.png"
             alt="Job search illustration"
             className="w-full h-auto object-cover"
           />
