@@ -127,7 +127,11 @@ export const updateProfile = async(req,res)=>{
       const {fullname,email,phoneNumber,bio,skills}=req.body;
       const file =req.file;
       const fileUri = getDataUri(file);
-        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+        const cloudResponse = await cloudinary.uploader.upload(fileUri.content,{
+          resource_type: "raw",  // for non-image files like PDFs
+          type: "upload",        // sets public access by default
+         folder: "resumes"
+        });
       
       
       
